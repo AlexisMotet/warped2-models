@@ -1,0 +1,5 @@
+add_executable(airport airport.cpp)
+message(STATUS ${WARPED2_INSTALL_DIR}/include)
+target_include_directories(airport PRIVATE ${WARPED2_INSTALL_DIR}/include)
+target_link_directories(airport PRIVATE ${WARPED2_INSTALL_DIR}/lib)
+target_link_libraries(airport PRIVATE warped2 json GKlib metis MPI::MPI_CXX)
